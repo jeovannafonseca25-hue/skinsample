@@ -2,20 +2,24 @@ import 'package:flutter/material.dart';
 import 'screens/sample_screen.dart';
 
 void main() {
-  runApp(const AfriDamApp());
+  runApp(const SkinApp());
 }
 
-class AfriDamApp extends StatelessWidget {
-  const AfriDamApp({Key? key}) : super(key: key);
+class SkinApp extends StatelessWidget {
+  const SkinApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'AfriDam Sample App',
+      title: 'Aplicativo SKIN', // UI Text in Portuguese
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        fontFamily: 'Roboto', // Pode ser alterado para a fonte exata do Figma depois
-        primarySwatch: Colors.brown,
+        primaryColor: const Color(0xFFA07154),
+        scaffoldBackgroundColor: const Color(0xFFF3EFEA),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: const Color(0xFFA07154),
+          primary: const Color(0xFFA07154),
+        ),
       ),
       home: const SampleScreen(),
     );
