@@ -4,7 +4,7 @@
 ![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
 ![Android Studio](https://img.shields.io/badge/Android_Studio-3DDC84?style=for-the-badge&logo=android-studio&logoColor=white)
 
-# 📱 SKIN - Catálogo de Design System
+# SKIN - Catálogo de Design System
 
 Este projeto é um aplicativo **Showcase (Catálogo)** desenvolvido em Flutter para demonstrar a implementação de um Design System focado em usabilidade, modularização e padrões arquiteturais.
 
