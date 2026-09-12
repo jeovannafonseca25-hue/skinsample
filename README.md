@@ -4,14 +4,31 @@
 ![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
 ![Android Studio](https://img.shields.io/badge/Android_Studio-3DDC84?style=for-the-badge&logo=android-studio&logoColor=white)
 
-A minimalistic, cross-platform dermatological analysis application built with Flutter. SKIN provides users with AI-driven skin analysis, routine tracking, and expert consultations wrapped in a clean, nature-inspired user interface.
+# 📱 SKIN - Catálogo de Design System
 
-## 📐 Architecture & Design System
+Este projeto é um aplicativo **Showcase (Catálogo)** desenvolvido em Flutter para demonstrar a implementação de um Design System focado em usabilidade, modularização e padrões arquiteturais.
 
-This project strictly follows a custom Design System pattern to ensure component reusability and UI consistency. The architecture separates UI building blocks from the final composed screens.
 
+##  Arquitetura Exigida (MVVM + Factory Pattern)
+
+
+1. **View Model (`_view_model.dart`):** Gerencia estritamente os dados e propriedades (textos, booleanos, callbacks) sem depender de bibliotecas visuais.
+2. **Component (`_component.dart`):** Um Widget *Stateless* burro, que apenas consome o View Model para desenhar a interface na tela.
+3. **Factory (`_factory.dart`):** A "Fábrica" que orquestra a injeção de dependências, criando o View Model e entregando-o pronto para o Component.
+
+### Estrutura de Diretórios
 ```text
 lib/
-├── components/     # Reusable atomic UI elements (Buttons, TabBars, Cards)
-├── screens/        # Composed views utilizing components
-└── main.dart       # Application entry point
+├── components/
+│   ├── action_button/
+│   ├── common/ (List Items, Modals, Quick Access)
+│   ├── input_field/
+│   └── tab_bar/
+├── screens/
+│   ├── analyzing_screen.dart
+│   ├── camera_screen.dart
+│   ├── sample_action_button_screen.dart
+│   ├── sample_list_items_screen.dart
+│   ├── sample_screen.dart (Menu Principal)
+│   └── sample_tab_bar_screen.dart
+└── main.dart
